@@ -1,0 +1,19 @@
+[11/08/2023 12:18:04 PM] ZIP Reader Version 14.00.0010 Build 1029
+[11/08/2023 12:18:04 PM] Loading C:\Users\PolvoRon\Propios\pythonAI\Projects\0\src0.zip
+	0 errors/warnings
+[11/08/2023 12:18:04 PM] Finished.
+[11/08/2023 12:18:04 PM] Extracting C:\Users\PolvoRon\Propios\pythonAI\Projects\0\src0.zip
+	Inflating C:\Users\PolvoRon\Propios\pythonAI\Projects\0\src0\src0\maze.py
+		CRC32 verified
+	Inflating C:\Users\PolvoRon\Propios\pythonAI\Projects\0\src0\src0\maze1.txt
+		CRC32 verified
+	Inflating C:\Users\PolvoRon\Propios\pythonAI\Projects\0\src0\src0\maze2.txt
+		CRC32 verified
+	Inflating C:\Users\PolvoRon\Propios\pythonAI\Projects\0\src0\src0\maze3.txt
+		CRC32 verified
+	Unstoring C:\Users\PolvoRon\Propios\pythonAI\Projects\0\src0\src0\requirements.txt
+		CRC32 verified
+	Extracted 5 file(s)/folder(s)
+	Skipped 0 file(s)/folder(s)
+	0 errors/warnings
+[11/08/2023 12:18:04 PM] Finished.
