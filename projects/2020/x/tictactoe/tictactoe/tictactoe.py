@@ -35,7 +35,7 @@ def player(board):
                 count_sp += 1
             else:
                 raise NotImplementedError("Invalid Symbol")
-    if count_sp + count_x + count_o > 9:
+    if count_sp + count_x + count_o != 9:
         raise NotImplementedError("Invalid Board")
     
     if count_sp == 9:
@@ -52,8 +52,20 @@ def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
     """
-    raise NotImplementedError
-
+    possible_actions = []
+    i     = 0
+    j     = 0
+    items = 0
+    for rows in board:
+        i += 1
+        for j in range(len(rows)):
+            items += 1
+            if rows[j] == EMPTY:
+                possible_actions.append((i,j))
+    if items != 9:
+        raise NotImplementedError("Invalid board")
+    else:
+        return possible_actions
 
 def result(board, action):
     """
@@ -89,15 +101,19 @@ def minimax(board):
     """
     raise NotImplementedError
 
+act = []
+
 board =     [[X, X, O],
-            [X, X, O],
+            [X, EMPTY, O],
             [O, X, O]]
 try:
-    sym = player(board)
+    act = actions(board)
 except NotImplementedError as e:
+    print (e)
     print ('An error has ocurred' ) 
 else:
-    print(f'{sym} player')   
+    for rows in act:
+        print([rows[i] for i in range(len(rows))]) 
 finally:
     print('Done')
 
