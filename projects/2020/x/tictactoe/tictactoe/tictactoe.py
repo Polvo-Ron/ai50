@@ -53,19 +53,23 @@ def actions(board):
     Returns set of all possible actions (i, j) available on the board.
     """
     possible_actions = []
-    i     = 0
-    j     = 0
+    i     = -1
+    j     = -1
     items = 0
-    for rows in board:
+    for _ in board:
         i += 1
-        for j in range(len(rows)):
+        j = -1
+        for x in _:
+            j += 1
             items += 1
-            if rows[j] == EMPTY:
+            if board[i][j] == EMPTY:
                 possible_actions.append((i,j))
+
     if items != 9:
         raise NotImplementedError("Invalid board")
     else:
         return possible_actions
+
 
 def result(board, action):
     """
@@ -112,8 +116,12 @@ except NotImplementedError as e:
     print (e)
     print ('An error has ocurred' ) 
 else:
-    for rows in act:
-        print([rows[i] for i in range(len(rows))]) 
+    print(act)
+    hd,*tl = act
+    print('extraido',hd,tl)
+    #for rows in rows:
+    #    print(rows)
+    #    print([rows[i] for i in range(len(rows))]) 
 finally:
     print('Done')
 
