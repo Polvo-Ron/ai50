@@ -196,22 +196,3 @@ def minimax(board):
         print (e)
         print ('An error has ocurred' ) 
 
-
-act = []
-
-board =     [[X,O, X],
-            [O,X ,EMPTY],
-            [O,X,O ]]
-try:
-    v = minimax(board)
-except NotImplementedError as e:
-    print (e)
-    print ('An error has been detected' ) 
-else:
-    print(v)
-    #for rows in rows:
-    #    print(rows)
-    #    print([rows[i] for i in range(len(rows))]) 
-finally:
-    print('Done')
-
